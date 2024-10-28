@@ -1,0 +1,24 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int numberOfStudents;
+        double totalMarks = 0;
+
+        Console.Write("Enter the number of students:");
+        numberOfStudents = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 1; i <= numberOfStudents; i++)
+        {
+            Console.Write($"Enter marks for student {i}:");
+            double marks = Convert.ToDouble(Console.ReadLine());
+            totalMarks += marks;
+        }
+
+        double average = totalMarks / numberOfStudents;
+
+        Console.WriteLine($"The average marks of the class is: {average:F2}");
+    }
+}
